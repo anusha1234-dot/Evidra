@@ -61,50 +61,50 @@ function Overview() {
       {/* Top Row: 4 Stat Cards */}
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {/* Card 1 */}
-        <div className="rounded-xl border border-[#e4e0d5] bg-white p-4 shadow-xs">
+        <div className="rounded-2xl border border-white/70 bg-white/65 p-4.5 shadow-xl backdrop-blur-xl transition-transform hover:scale-[1.01]">
           <div className="flex items-center justify-between">
             <p className="font-mono text-[10px] font-bold tracking-wider text-[#60646c] uppercase">SCANNED BLOCKS</p>
-            <div className="grid size-7 place-items-center rounded-md bg-[#059669]/10 text-[#059669]">
+            <div className="grid size-7 place-items-center rounded-lg bg-[#059669]/10 text-[#059669]">
               <Layers size={15} />
             </div>
           </div>
-          <p className="mt-2 font-mono text-3xl font-bold text-[#1c2024]">18,384</p>
+          <p className="mt-2.5 font-mono text-3xl font-bold text-[#1c2024]">18,384</p>
           <p className="mt-1 font-mono text-[11px] text-[#60646c]">18,384 processed</p>
         </div>
 
         {/* Card 2 */}
-        <div className="rounded-xl border border-[#e4e0d5] bg-white p-4 shadow-xs">
+        <div className="rounded-2xl border border-white/70 bg-white/65 p-4.5 shadow-xl backdrop-blur-xl transition-transform hover:scale-[1.01]">
           <div className="flex items-center justify-between">
             <p className="font-mono text-[10px] font-bold tracking-wider text-[#60646c] uppercase">RECOVERED FILES</p>
-            <div className="grid size-7 place-items-center rounded-md bg-[#2563eb]/10 text-[#2563eb]">
+            <div className="grid size-7 place-items-center rounded-lg bg-[#2563eb]/10 text-[#2563eb]">
               <FileCheck2 size={15} />
             </div>
           </div>
-          <p className="mt-2 font-mono text-3xl font-bold text-[#1c2024]">42</p>
+          <p className="mt-2.5 font-mono text-3xl font-bold text-[#1c2024]">42</p>
           <p className="mt-1 font-mono text-[11px] text-[#60646c]">38 intact · 4 partial</p>
         </div>
 
         {/* Card 3 */}
-        <div className="rounded-xl border border-[#e4e0d5] bg-white p-4 shadow-xs">
+        <div className="rounded-2xl border border-white/70 bg-white/65 p-4.5 shadow-xl backdrop-blur-xl transition-transform hover:scale-[1.01]">
           <div className="flex items-center justify-between">
             <p className="font-mono text-[10px] font-bold tracking-wider text-[#60646c] uppercase">ENTROPY SCORE</p>
-            <div className="grid size-7 place-items-center rounded-md bg-[#0284c7]/10 text-[#0284c7]">
+            <div className="grid size-7 place-items-center rounded-lg bg-[#0284c7]/10 text-[#0284c7]">
               <PieIcon size={15} />
             </div>
           </div>
-          <p className="mt-2 font-mono text-3xl font-bold text-[#1c2024]">94%</p>
+          <p className="mt-2.5 font-mono text-3xl font-bold text-[#1c2024]">94%</p>
           <p className="mt-1 font-mono text-[11px] text-[#60646c]">high-entropy media</p>
         </div>
 
         {/* Card 4 */}
-        <div className="rounded-xl border border-[#e4e0d5] bg-white p-4 shadow-xs">
+        <div className="rounded-2xl border border-white/70 bg-white/65 p-4.5 shadow-xl backdrop-blur-xl transition-transform hover:scale-[1.01]">
           <div className="flex items-center justify-between">
             <p className="font-mono text-[10px] font-bold tracking-wider text-[#60646c] uppercase">ANOMALOUS PATTERNS</p>
-            <div className="grid size-7 place-items-center rounded-md bg-[#d97706]/10 text-[#d97706]">
+            <div className="grid size-7 place-items-center rounded-lg bg-[#d97706]/10 text-[#d97706]">
               <AlertTriangle size={15} />
             </div>
           </div>
-          <p className="mt-2 font-mono text-3xl font-bold text-[#1c2024]">3</p>
+          <p className="mt-2.5 font-mono text-3xl font-bold text-[#1c2024]">3</p>
           <p className="mt-1 font-mono text-[11px] text-[#d97706] font-medium">require examiner review</p>
         </div>
       </div>
@@ -112,25 +112,25 @@ function Overview() {
       {/* Middle Row Grid */}
       <div className="mt-6 grid gap-6 lg:grid-cols-3">
         {/* Left Column (2 Cols): Evidence Block Profile */}
-        <div className="lg:col-span-2 rounded-xl border border-[#e4e0d5] bg-white p-5 shadow-xs">
-          <div className="flex items-center justify-between border-b border-[#f0eee6] pb-4">
+        <div className="lg:col-span-2 rounded-2xl border border-white/70 bg-white/65 p-6 shadow-xl backdrop-blur-xl">
+          <div className="flex items-center justify-between border-b border-[#e4e0d5]/60 pb-4">
             <div>
               <h2 className="text-base font-bold text-[#1c2024]">Evidence block profile</h2>
               <p className="font-mono text-[11px] text-[#60646c]">Classification across the acquired image</p>
             </div>
-            <div className="flex items-center gap-1 rounded-md border border-[#e4e0d5] bg-[#f6f4ee] p-0.5 font-mono text-[11px]">
+            <div className="flex items-center gap-1 rounded-lg border border-white/80 bg-white/40 p-1 font-mono text-[11px]">
               <button
                 onClick={() => setTab("composition")}
-                className={`rounded-sm px-2.5 py-1 transition-all ${
-                  tab === "composition" ? "bg-white text-[#1c2024] font-bold shadow-xs" : "text-[#60646c]"
+                className={`rounded-md px-3 py-1 transition-all ${
+                  tab === "composition" ? "bg-white text-[#1c2024] font-bold shadow-md" : "text-[#60646c]"
                 }`}
               >
                 Composition
               </button>
               <button
                 onClick={() => setTab("entropy")}
-                className={`rounded-sm px-2.5 py-1 transition-all ${
-                  tab === "entropy" ? "bg-white text-[#1c2024] font-bold shadow-xs" : "text-[#60646c]"
+                className={`rounded-md px-3 py-1 transition-all ${
+                  tab === "entropy" ? "bg-white text-[#1c2024] font-bold shadow-md" : "text-[#60646c]"
                 }`}
               >
                 Entropy
