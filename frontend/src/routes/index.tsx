@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { Badge, Panel, Stat } from "@/components/ui/primitives";
 import { useCaseOverview } from "@/lib/api";
-import { CASE, CUSTODY_LOG } from "@/lib/forensic-data";
+import { CASE, CUSTODY_LOG, KPIS, BENCHMARKS } from "@/lib/forensic-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
