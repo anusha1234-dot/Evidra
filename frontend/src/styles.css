@@ -44,35 +44,35 @@
 
 :root {
   --radius: 0.5rem;
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #f6f4ee;
+  --foreground: #1c2024;
   --surface: #ffffff;
-  --surface-2: #f1f5f9;
+  --surface-2: #f0eee6;
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #1c2024;
   --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #4f46e5;
+  --popover-foreground: #1c2024;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #e0e7ff;
-  --secondary-foreground: #3730a3;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #e0e7ff;
-  --accent-foreground: #3730a3;
-  --destructive: #dc2626;
+  --secondary: #f0eee6;
+  --secondary-foreground: #1c2024;
+  --muted: #f0eee6;
+  --muted-foreground: #60646c;
+  --accent: #2563eb;
+  --accent-foreground: #ffffff;
+  --destructive: #d97706;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --input: #e2e8f0;
-  --ring: #6366f1;
+  --border: #e4e0d5;
+  --border-strong: #d2cebf;
+  --input: #e4e0d5;
+  --ring: #2563eb;
   --intact: #059669;
   --partial: #d97706;
-  --encrypted: #e11d48;
+  --encrypted: #dc2626;
   --document: #0284c7;
-  --unalloc: #94a3b8;
-  --violet-evidence: #7c3aed;
-  --text-evidence: #0284c7;
+  --unalloc: #8b909a;
+  --sidebar-bg: #eae7dd;
+  --sidebar-border: #ded9cc;
 }
 
 @layer base {
@@ -89,35 +89,43 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    background: rgba(37, 99, 235, 0.15);
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: var(--color-background);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-border-strong);
-    border-radius: 4px;
+    background: #d2cebf;
+    border-radius: 3px;
   }
 }
 
 @utility panel {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
-  transition: all 0.2s ease-in-out;
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 3px 0 rgba(28, 32, 36, 0.04), 0 1px 2px -1px rgba(28, 32, 36, 0.03);
 }
 
 @utility panel-glow {
   background-color: var(--color-surface);
-  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, var(--color-border));
-  border-radius: var(--radius-lg);
-  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.05);
+  border: 1px solid #d2cebf;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 12px -2px rgba(28, 32, 36, 0.06);
+}
+
+@utility label-xs {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+  font-weight: 600;
 }
 
 @utility grid-lines {
