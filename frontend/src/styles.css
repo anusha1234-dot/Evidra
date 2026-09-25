@@ -43,36 +43,36 @@
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(0.154 0.025 264);
-  --foreground: oklch(0.96 0.006 250);
-  --surface: oklch(0.21 0.027 265);
-  --surface-2: oklch(0.255 0.025 263);
-  --card: oklch(0.21 0.027 265);
-  --card-foreground: oklch(0.96 0.006 250);
-  --popover: oklch(0.21 0.027 265);
-  --popover-foreground: oklch(0.96 0.006 250);
-  --primary: oklch(0.64 0.2 275);
-  --primary-foreground: oklch(0.98 0.005 250);
-  --secondary: oklch(0.28 0.03 263);
-  --secondary-foreground: oklch(0.96 0.006 250);
-  --muted: oklch(0.255 0.025 263);
-  --muted-foreground: oklch(0.72 0.02 260);
-  --accent: oklch(0.3 0.035 265);
-  --accent-foreground: oklch(0.98 0.005 250);
-  --destructive: oklch(0.65 0.22 15);
-  --destructive-foreground: oklch(0.98 0.005 250);
-  --border: oklch(0.34 0.025 265);
-  --border-strong: oklch(0.45 0.025 265);
-  --input: oklch(0.3 0.025 265);
-  --ring: oklch(0.64 0.2 275);
-  --intact: oklch(0.72 0.17 160);
-  --partial: oklch(0.8 0.16 75);
-  --encrypted: oklch(0.68 0.22 15);
-  --document: oklch(0.73 0.16 215);
-  --unalloc: oklch(0.43 0.016 260);
-  --violet-evidence: oklch(0.7 0.2 305);
-  --text-evidence: oklch(0.82 0.16 95);
+  --radius: 0.5rem;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --secondary: #e0e7ff;
+  --secondary-foreground: #3730a3;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e0e7ff;
+  --accent-foreground: #3730a3;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --input: #e2e8f0;
+  --ring: #6366f1;
+  --intact: #059669;
+  --partial: #d97706;
+  --encrypted: #e11d48;
+  --document: #0284c7;
+  --unalloc: #94a3b8;
+  --violet-evidence: #7c3aed;
+  --text-evidence: #0284c7;
 }
 
 @layer base {
@@ -89,35 +89,35 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    background: color-mix(in oklab, var(--color-primary) 20%, transparent);
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
     background: var(--color-background);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--color-border-strong);
-    border: 2px solid var(--color-background);
+    border-radius: 4px;
   }
 }
 
 @utility panel {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
   transition: all 0.2s ease-in-out;
 }
 
 @utility panel-glow {
   background-color: var(--color-surface);
-  border: 1px solid color-mix(in oklab, var(--color-primary) 40%, var(--color-border));
-  border-radius: var(--radius);
-  box-shadow: 0 0 25px -5px color-mix(in oklab, var(--color-primary) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, var(--color-border));
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.05);
 }
 
 @utility grid-lines {
